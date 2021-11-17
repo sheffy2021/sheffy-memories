@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 mongoose
-    .connect(process.env.CONNECTION_URL)
+    .connect(process.env.CONNECTION_URL || 'mongodb+srv://sheffy-memories:sheffy-memories1@cluster0.l1pq6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
     .then(()=>console.log('MongoDB Connected...'))
     .catch(err => console.log(err));
 
